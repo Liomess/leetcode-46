@@ -1,0 +1,18 @@
+class Solution:
+    def permute(self, nums: List[int]) -> List[List[int]]:
+        def solve(self,i,arr,n):
+            if i==n:
+                return res.append(arr)
+            
+            for j in range(i,n):
+                arr[i],arr[j]=arr[j],arr[i]
+                solve(self,i+1,list(arr),n)
+                arr[i],arr[j]=arr[j],arr[i]
+        n=len(nums)
+        res=[]
+        solve(self,0,nums,n)
+        return res
+        
+
+
+        
